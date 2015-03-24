@@ -5,6 +5,9 @@ class MoviesController < ApplicationController
     @movies = Movie.all
     title = params[:sort_by]
     release_date_header = params[:id]
+
+    #sorting
+    @movies = Movie.find(:all, :order=>title)
   end
 
   def show
