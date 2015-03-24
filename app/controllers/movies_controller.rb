@@ -3,11 +3,16 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
-    title = params[:sort_by]
+    titlew = params[:sort_by]
     release_date_header = params[:id]
 
-    #sorting
-    @movies = Movie.find(:all, :order=>title)
+    #sorting by title
+    #@movies = Movie.find(:all, :order=>titlew)
+
+    #sorting by release date
+    release = params[:sort]
+    @movies = Movie.find(:all, :order=>release)
+
   end
 
   def show
