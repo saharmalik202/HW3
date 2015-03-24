@@ -1,5 +1,6 @@
 /* Simple CSS styling for RottenPotatoes app */
 
+
 html, body {
   margin: 0;
   padding: 0;
@@ -50,6 +51,14 @@ table#movies th, table#movies td {
   padding: 4px;
   text-align: left;
 }
+
+table#movies th.hilite {
+  color: maroon;
+  background-color: yellow;
+  border: 2px solid solid black;
+  border-bottom: 2px solid black;
+}
+
 #notice, #warning {
   background: rosybrown;
   margin: 1em 0;
